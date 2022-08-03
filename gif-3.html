@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gif 1 to SVG Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: beige;
+      }
+
+      .wrapper {
+        width: 100%;
+      }
+
+      :root {
+        --aniDur: 12s;
+      }
+
+      #bubble-arch {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: rounding var(--aniDur) linear infinite alternate;
+      }
+
+      @keyframes rounding {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(45deg);
+        }
+      }
+
+      #bean {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: arcUpDown var(--aniDur) linear infinite alternate;
+      }
+
+      @keyframes arcUpDown {
+        100% {
+          transform: translate(75px, -100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wrapper">
+        <svg
+          width="100%"
+          min-height="0"
+          viewBox="0 0 2866 1642"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="bubble-arch">
+            <path
+              id="Vector"
+              d="M154.273 716.781C146.436 753.103 155.935 791.631 174.331 823.911C211.464 889.087 287.39 931.098 362.108 924.471C436.825 917.844 505.394 861.007 522.503 787.973C533.61 740.565 523.962 690.012 503.355 645.904C491.674 620.904 475.133 596.273 449.927 585.04C425.842 574.3 397.884 577.603 372.337 584.135C356.856 588.102 340.773 593.768 330.764 606.22C309.673 632.453 326.135 670.951 343.047 700.061C356.192 722.688 369.337 745.315 382.469 767.95C385.14 772.557 387.909 777.642 387.037 782.901C386.11 788.476 381.206 792.637 375.971 794.762C358.187 801.987 337.309 789.794 328.147 772.93C318.972 756.074 318.488 736.018 318.097 716.832C317.706 697.647 316.948 677.544 307.352 660.929C265.888 589.033 166.448 660.376 154.273 716.781Z"
+              fill="#92AAA3"
+            />
+          </g>
+          <g id="bean">
+            <path
+              id="Vector_2"
+              d="M3020.6 1153C3038.23 1208.89 3039.52 1269.13 3029.73 1326.89C3012.67 1427.31 2961.49 1521.95 2885.34 1589.6C2838.64 1631.1 2780.09 1663.19 2717.61 1663.8C2655.14 1664.41 2589.98 1626.96 2572.24 1567.06C2550.86 1494.85 2599.77 1423.18 2636.73 1357.57C2677.3 1285.53 2705.74 1206.67 2720.49 1125.3C2731.8 1062.93 2751.59 936.122 2842.85 955.749C2923.26 973.027 2998.05 1081.51 3020.6 1153Z"
+              fill="#DEEAE6"
+            />
+          </g>
+          <defs></defs>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
