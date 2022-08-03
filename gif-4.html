@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gif to SVG Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: beige;
+      }
+
+      .wrapper {
+        width: 100%;
+      }
+
+      :root {
+        --aniDur: 12s;
+      }
+
+      #egg-arch {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: rounding var(--aniDur) linear infinite alternate;
+      }
+
+      @keyframes rounding {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(30deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wrapper">
+        <svg
+          width="100%"
+          min-height="0"
+          viewBox="0 0 1078 819"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="Gif-4">
+            <g id="egg-arch">
+              <g id="arch">
+                <path
+                  id="Vector"
+                  d="M844.739 128.902C837.058 128.059 828.101 128.699 823.42 134.833C819.025 140.585 820.252 148.684 821.653 155.784C824.489 170.179 827.184 184.761 826.531 199.42C825.879 214.08 821.586 229.015 811.925 240.069C802.258 251.123 786.628 257.56 772.404 253.87C762.58 251.32 754.287 244.271 748.959 235.643C743.63 227.016 741.07 216.917 740.164 206.823C739.562 200.156 739.416 192.804 734.937 187.822C729.958 182.278 721.574 181.795 714.114 181.711C707.429 181.632 699.879 181.919 695.394 186.861C691.895 190.72 691.326 196.337 691.056 201.538C690.291 216.085 690.465 230.813 693.712 245.012C696.958 259.211 703.457 272.944 713.934 283.083C725.665 294.434 741.548 300.562 757.494 304.112C772.28 307.398 787.669 308.701 802.602 306.173C817.534 303.646 832.017 297.091 842.606 286.279C855.384 273.231 861.579 255.178 865.68 237.396C871.718 211.227 874.041 184.216 872.573 157.407C872.23 151.099 873.788 135.911 868.561 131.44C864.021 127.554 850.5 129.536 844.739 128.902V128.902Z"
+                  fill="#DEEAE6"
+                />
+              </g>
+              <g id="egg">
+                <path
+                  id="Vector_2"
+                  d="M776.38 104.577C765.162 92.3565 746.402 86.8327 731.022 93.0882C720.948 97.186 712.939 106.057 709.905 116.485C704.607 134.683 715.68 155.505 733.051 163.134C748.023 169.71 773.676 167.367 785.098 154.116C796.603 140.774 786.837 115.966 776.38 104.577V104.577Z"
+                  fill="#DEEAE6"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
